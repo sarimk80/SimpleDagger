@@ -1,1 +1,6 @@
-[]
+{
+  "version": 1,
+  "applicationId": "com.example.simpledagger",
+  "variantType": "BASE_APK",
+  "elements": []
+}

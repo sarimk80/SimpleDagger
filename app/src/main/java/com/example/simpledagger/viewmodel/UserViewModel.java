@@ -18,6 +18,8 @@ public class UserViewModel extends ViewModel {
     private UserRepository userRepository;
     private final CompositeDisposable disposable = new CompositeDisposable();
     private final MutableLiveData<UserModel> modelMutableLiveData = new MutableLiveData<>();
+    private final MutableLiveData<Boolean> isLoading = new MutableLiveData<>();
+    private final MutableLiveData<String> error = new MutableLiveData<>();
 
     @Inject
     public UserViewModel(UserRepository userRepository) {
@@ -30,28 +32,37 @@ public class UserViewModel extends ViewModel {
     }
 
     private void loadData() {
+        isLoading.setValue(true);
         disposable.add(userRepository.modelSingle()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeWith(new DisposableSingleObserver<UserModel>() {
                     @Override
                     public void onSuccess(UserModel userModel) {
-                        getModelMutableLiveData().setValue(userModel);
+                        isLoading.setValue(false);
+                        modelMutableLiveData.setValue(userModel);
                     }
 
                     @Override
                     public void onError(Throwable e) {
-
+                        error.setValue(e.getMessage());
+                        isLoading.setValue(false);
                     }
                 }));
+    }
+
+    public MutableLiveData<Boolean> getIsLoading() {
+        return isLoading;
+    }
+
+    public MutableLiveData<String> getError() {
+        return error;
     }
 
     @Override
     protected void onCleared() {
         super.onCleared();
-        if (disposable != null) {
-            disposable.clear();
+        disposable.clear();
 
-        }
     }
 }

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "F:\\SimpleDagger\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
+            "outputFile": "F:\\simpleDaggerGithub\\SimpleDagger\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\abbott\\.gradle\\caches\\transforms-2\\files-2.1\\3782ce24e9cd17a44cf05eaee5d50a9f\\appcompat-1.0.2\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "source": "C:\\Users\\abbott\\.gradle\\caches\\transforms-2\\files-2.1\\1da369d51222060556a9aef7f3f0126c\\appcompat-1.0.2\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

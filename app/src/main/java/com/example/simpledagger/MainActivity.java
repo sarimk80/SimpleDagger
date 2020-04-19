@@ -42,5 +42,19 @@ public class MainActivity extends AppCompatActivity {
                 Log.d(TAG, "onChanged: " + userModel.getPhone());
             }
         });
+
+        userViewModel.getIsLoading().observe(this, new Observer<Boolean>() {
+            @Override
+            public void onChanged(Boolean aBoolean) {
+                Log.d(TAG, aBoolean.toString());
+            }
+        });
+
+        userViewModel.getError().observe(this, new Observer<String>() {
+            @Override
+            public void onChanged(String s) {
+                Log.d(TAG, s);
+            }
+        });
     }
 }

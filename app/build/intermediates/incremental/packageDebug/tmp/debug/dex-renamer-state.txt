@@ -1,4 +1,4 @@
-#Tue Jul 16 22:20:01 PKT 2019
-base.0=F\:\\SimpleDagger\\app\\build\\intermediates\\dex\\debug\\out\\classes.dex
+#Sun Apr 19 16:29:35 PKT 2020
+base.0=F\:\\simpleDaggerGithub\\SimpleDagger\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
